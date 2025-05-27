@@ -1,0 +1,54 @@
+@import "tailwindcss";
+#root {
+    max-width: 1920px;
+    max-height: 1280px;
+    margin: 0 auto;
+}
+body {
+    display: flex;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color:white;
+}
+button{
+    color: white;
+    background-color: #1a1a1a;
+    border: 2px solid white;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 15px;
+}
+.menuBox{
+    @apply flex flex-col relative m-auto
+    text-[60px] items-center justify-center border-2
+    rounded-[15px] w-[1280px] h-[720px];
+}
+/* buttons */
+.menuButton{
+    @apply text-2xl;
+}
+.goBackButton{
+    @apply text-[30px] top-0 left-0 absolute;
+}
+.playButton{
+    @apply text-5xl px-7.5 py-5;
+}
+/* game */
+main{
+    position: relative;
+    width: 1800px;
+    height:800px;
+    border: 10px solid white;
+    border-left: 10px solid red;
+    border-right: none;
+}
+.ball{
+    @apply bg-white w-[30px] h-[30px] rounded-full absolute;
+}
+.paddle{
+    @apply bg-white h-[80px] w-[10px] absolute top-1/2 right-0;
+}
+.counter{
+    @apply text-center text-3xl mb-4.5;
+}
