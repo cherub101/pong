@@ -6,8 +6,8 @@ services:
     container_name: pong_backend
     ports:
       - "3000:3000"
-    volumes:
-      - .:/app
+    environment:
+      - NODE_ENV=production
     labels:
       - com.casaplatform.app=pong_backend
     restart: unless-stopped
