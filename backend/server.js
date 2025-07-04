@@ -18,7 +18,7 @@ app.use(cors({
 //SQL
 const pgClient = new Client({
     user: 'pong',
-    host: 'postgre.local',
+    host: '192.168.100.20',
     database: 'pong',
     password: 'PongPostgre.#$2812>',
     port: 5432,

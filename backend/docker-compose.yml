@@ -6,8 +6,6 @@ services:
     container_name: pong_backend
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=production
     volumes:
       - .:/app
     labels:
