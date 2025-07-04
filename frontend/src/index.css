@@ -3,6 +3,7 @@
     max-width: 1920px;
     max-height: 1280px;
     margin: 0 auto;
+    font-family: SansSerif;
 }
 body {
     display: flex;
@@ -19,10 +20,15 @@ button{
     border-radius: 15px;
     padding: 15px;
 }
+
 .menuBox{
     @apply flex flex-col relative m-auto
     text-[60px] items-center justify-center border-2
     rounded-[15px] w-[1280px] h-[720px];
+}
+.inputData{
+    @apply  p-[6px] text-center text-2xl w-[300px]
+    mr-6 border-2 border-white rounded-[15px];
 }
 /* buttons */
 .menuButton{
@@ -34,21 +40,50 @@ button{
 .playButton{
     @apply text-5xl px-7.5 py-5;
 }
+@media (max-width: 1799px), (max-height: 799px) {
+    main,
+    .ball,
+    .paddle,
+    .counter,
+    .menuBox,
+    .youLostBox {
+        display: none;
+    }
+
+    .tooSmall {
+        display: flex;
+    }
+}
 /* game */
 main{
     position: relative;
     width: 1800px;
     height:800px;
     border: 10px solid white;
-    border-left: 10px solid red;
     border-right: none;
+}
+.paddle{
+    @apply bg-white h-[80px] w-[10px]
+    absolute top-1/2;
+}
+.paddleRight{
+    @apply right-0;
+}
+.paddleLeft{
+    @apply left-0;
+}
+.youLostBox{
+    @apply absolute top-1/2 left-1/2
+    -translate-x-1/2 -translate-y-1/2
+    flex flex-col text-[60px] items-center
+    justify-center w-[1280px] h-[720px];
+}
+.gameField1{
+    @apply border-l-red-500;
+}
+.gameField2{
+    @apply border-l-0;
 }
 .ball{
     @apply bg-white w-[30px] h-[30px] rounded-full absolute;
-}
-.paddle{
-    @apply bg-white h-[80px] w-[10px] absolute top-1/2 right-0;
-}
-.counter{
-    @apply text-center text-3xl mb-4.5;
 }

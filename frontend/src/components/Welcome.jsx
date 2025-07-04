@@ -1,6 +1,6 @@
 export default function Welcome({onButtonClick}) {
     return (
-        <>
+        <div className='menuBox'>
             <h1>
                 Welcome at PONG game!!!
             </h1>
@@ -18,6 +18,6 @@ export default function Welcome({onButtonClick}) {
                     TWO PLAYERS
                 </button>
             </div>
-        </>
+        </div>
     )
 }
