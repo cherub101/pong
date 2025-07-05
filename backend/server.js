@@ -10,7 +10,7 @@ const KEY = '0VN8UADS8787R1#@$#%$%!CA340CHM423#@$87';
 const app = express();
 app.use(cors({
     origin: '*',
-    methods: ['POST'],
+    methods: ['GET','POST'],
     credentials: true
 }))
     .use(express.json())
